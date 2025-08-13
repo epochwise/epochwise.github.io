@@ -1,0 +1,39 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<style>
+	html, body {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+	}
+	body {
+		display: flex;
+		flex-direction: column;
+		height: 100 vh;
+		overflow: hidden;
+	}
+
+	main {
+		flex: 1;
+	}
+</style>
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h3>Getting wise [One Epoch at a Time]</h3>
+			<p>I'm capturing my lessons, experiments, and learning paths in DevSecOps, MLOps, and AI engineering. Think of it as a <strong>Today I Learned</strong> journal, advancing one epoch at a time.</p>
+		</main>
+		<Footer />
+	</body>
+</html>
